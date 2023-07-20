@@ -48,6 +48,9 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector('.nine').onclick = ()=>{
         content_bar.textContent += '9'
     }
+    document.querySelector('.decimal').onclick = ()=>{
+        content_bar.textContent += '.'
+    }
     document.querySelector('.clr').onclick = ()=>{
         content_bar.textContent = ''
     }
@@ -65,10 +68,10 @@ document.addEventListener("DOMContentLoaded", function() {
             '/':(a,b)=>a/b,
         }
         const sep_op = calculate.split(/(\+|\-|\x|\/)/)
-        let result = parseInt(sep_op[0])
+        let result = parseFloat(sep_op[0])
         for(i=1;i<sep_op.length;i=i+2){
             const operand = sep_op[i]
-            const num = parseInt(sep_op[i+1])
+            const num = parseFloat(sep_op[i+1])
             result = operators[operand](result,num)
         }
         return result
@@ -78,3 +81,8 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 //match(/\d+|\+|\-|\x|\//g)
+/*for(i=1;i<sep_op.length;i=i+2){
+    const operand = sep_op[i]
+    const num = parseInt(sep_op[i+1])
+    result = operators[operand](result,num)
+}*/
