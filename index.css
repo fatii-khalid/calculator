@@ -24,6 +24,9 @@ html, body {
     font-size: xx-large;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 8px black;
+    color: black;
+    text-shadow: 0 0 6px blue;
 }
 
 .main .operations{
@@ -34,6 +37,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    box-shadow: 0 0 8px black;
 }
 
 .main .operations .op, .num1, .num2, .num3{
@@ -41,18 +45,44 @@ html, body {
     gap: 30px;
 }
 
-.main .operations .op .plus, .minus, .multiply, .divide{
+.main .operations .op .plus, .minus, .multiply, .divide, .decimal{
     font-size: xx-large;
+}
+
+.main .operations .op .plus:hover, .minus:hover, .multiply:hover, .divide:hover, .decimal:hover{
+    color: blueviolet;
+    box-shadow: 0 0 8px rgb(5, 63, 145);
 }
 
 .main .operations .num1 .one, .two, .three, .four{
     font-size: xx-large;
 }
 
+.main .operations .num1 .one:hover, .two:hover, .three:hover, .four:hover{
+    color: coral;
+    box-shadow: 0 0 8px rgb(5, 63, 145);
+}
+
 .main .operations .num2 .five, .six, .seven, .eight{
     font-size: xx-large;
 }
 
+.main .operations .num2 .five:hover, .six:hover, .seven:hover, .eight:hover{
+    color: coral;
+    box-shadow: 0 0 8px rgb(5, 63, 145);
+}
+
 .main .operations .num3 .nine, .zero, .equal, .clr{
     font-size: xx-large;
+}
+
+.main .operations .num3 .nine:hover, .zero:hover{
+    color: coral;
+    box-shadow: 0 0 8px rgb(5, 63, 145);
+}
+
+.main .operations .num3 .equal:hover, .clr:hover{
+    color: white;
+    background-color: rgb(58, 58, 58);
+    box-shadow: 0 0 8px rgb(5, 63, 145);
 }
